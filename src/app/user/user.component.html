@@ -1,0 +1,7 @@
+
+<div>Customer Name</div>
+<input type="text" [(ngModel)]="typedText">
+<p *ngFor="let customerName of customerList">{{customerName}}</p>
+
+<button (click)="onButtonClick()">Add</button>
+

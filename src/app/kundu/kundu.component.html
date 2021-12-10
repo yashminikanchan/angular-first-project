@@ -1,0 +1,42 @@
+<!-- <form action="https://www.youtube.com/results">
+
+    <input type="text" name="search_query">
+
+    <button>Search </button>
+</form> -->
+
+<div>
+    <input type="text" name="search_query" [(ngModel)]="searhchedTerm">
+
+    <button (click)="onYoutubeSearchClick()">Search </button>
+    <br>
+    You have searched for {{searhchedTerm}}
+</div>
+
+<div>
+
+    <input type="text" name="q" [(ngModel)]="typedTerm">
+    <button (click)="onGoogleSearchClick()">Google</button>
+    <br>
+    Typed for {{typedTerm}}
+</div>
+
+<div>
+    <button (click)="onFacebookSearchClick()">Facebook</button>
+
+</div>
+
+<div class="container">
+    <h1>Install Bootstrap 5 in Angular 12 - ItSolutionStuff.com</h1>
+
+    <div class="card">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>

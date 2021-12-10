@@ -1,0 +1,26 @@
+<div>
+    <div class=gcopy>
+        <div class=gimage>
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+
+        </div>
+        <div class="container">
+            <form action="" class="row">
+                <div class="col order-5">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg">
+                        <button (click)="onSearchClick()" type="submit" class="input-group-text btn-success"><i
+                                class="bi bi-search me-2"></i>
+                            Search</button>
+                            <button (click)="onCancelClick()" type="submit" class="input-group-text btn-success"><i
+                                class="bi bi-search me-2"></i>
+                            Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div *ngIf="isBiopicVisible">
+    <biopic></biopic>
+</div>

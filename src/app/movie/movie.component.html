@@ -1,0 +1,35 @@
+<div>
+    <div class="container">
+
+        <div class="col order-7">
+            <div class="input-group mb-3">
+                <input type="text" placeholder="Movie Name" class="form-control form-control-lg"
+                    [(ngModel)]="movieName">
+                <input type="text" placeholder="Actor Name" class="form-control form-control-lg"
+                    [(ngModel)]="actorName">
+
+                <button (click)="onAddClick()" class="input-group-text btn-success"><i class="bi bi-search me-2"></i>
+                    Add</button>
+
+            </div>
+        </div>
+        <!-- </form> -->
+
+
+        <div *ngFor="let movie of movieList, let i=index" class="card w-75">
+            <div class="card-body">
+                <h5 class="card-title">Movie Name:{{movie.movieName}}</h5>
+                <p class="card-text">Actor Name:{{movie.actorName}}</p>
+            </div>
+            <button (click)="onDeleteClick(i)" type="submit" class="btn btn-primary">Delete</button>
+
+            <button *ngIf="movie.isEditVisible" (click)="onEditClick(i)" type="submit"
+                class="btn btn-primary">Edit</button>
+
+            <button *ngIf="!movie.isEditVisible" (click)="onUpdateClick(i)" type="submit"
+                class="btn btn-primary">Update</button>
+
+        </div>
+    </div>
+
+</div>

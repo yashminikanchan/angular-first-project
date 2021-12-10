@@ -1,0 +1,44 @@
+<div>
+    <label>Name </label>
+    <input type="text" name="Name" size="15" [(ngModel)]="cName" /><br><br>
+    <label>school </label>
+    <input type="text" name="search_query" [(ngModel)]="cSchool" /> <br>
+    <br>
+    <label>Class </label>
+    <input type="number" name="class" [(ngModel)]="cClass" /> <br><br>
+    <label>Name's Color </label>
+    <select [(ngModel)]="selectedColor" (change)="onColorChange()">
+        <option *ngFor="let color of colorList" value="{{color}}">{{color}}</option>
+        <!-- <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option> -->
+    </select><br><br>
+
+    <p *ngFor="let familyName of familyList">{{familyName}}</p>
+    <!-- <p>Chandan</p>
+    <p>Gunjan</p>
+    <p>Choti</p>
+    <p>Yashi</p> -->
+
+    <h4>Customer Information</h4>
+    <span>Name:</span>
+    <span class="Namer" *ngIf="selectedColor == 'Red'">{{cName}}</span>
+    <span class="Nameb" *ngIf="selectedColor == 'Blue'">{{cName}}</span>
+    <span class="Nameg" *ngIf="selectedColor == 'Green'">{{cName}}</span>
+    <br>
+    School:{{cSchool}}
+    <br>
+    Class:{{cClass}}
+    <br>
+
+
+    <button (click)="onGoogleSearchName()">Search Name on Google</button><br><br>
+    <button (click)="onYoutubeSearchschool()">Search school on YouTube</button><br><br>
+    <button (click)="onGoogleSearchclass()">Search class on Google</button><br><br>
+    <!-- <label>
+        colors:
+    </label> -->
+
+
+
+</div>

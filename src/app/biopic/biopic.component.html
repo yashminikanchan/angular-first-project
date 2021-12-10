@@ -1,0 +1,27 @@
+<!-- <span *ngIf="movieName">
+    <p>Hello! My name is kundan</p>
+</span>
+
+<span *ngIf="!movieName">
+    <p>Hello! My name is kanchan</p>
+</span> -->
+
+<!-- <div *ngFor="let movie of movieList.results" class="card" style="width: 18rem;">
+   <br><img class="card-img-top" src='https://image.tmdb.org/t/p/w500/{{movie.poster_path}}' alt="Card image cap"> <br>
+    <div class="card-body">
+        <p class="card-text">{{movie.title}}</p>
+    </div>
+</div> -->
+
+<div class="row">
+    <div *ngFor="let movie of movieList.results;let i=index" class="col-4 card" style="width: 14em">
+        <img src='https://image.tmdb.org/t/p/w500/{{movie.poster_path}}' class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-text">{{i+1}}.<span class="text-danger"> {{movie.title}}</span></h5>
+            <h5 class="card-text">Rating- ({{movie.vote_average}})</h5>
+            <br>
+            <p class="card-text">{{movie.overview}}</p>
+            <!--  <img src='https://image.tmdb.org/t/p/w400/{{movie.backdrop_path}}' class="bg-image" alt="..."> -->
+        </div>
+    </div>
+</div>

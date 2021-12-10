@@ -1,0 +1,11 @@
+<!-- <p (click)="onFacebookClick()">Facebook</p>
+
+<p (click)="onInstagramClick()">Instagram</p>
+
+<p (click)="onYoutubeClick()">YouTube</p> -->
+
+ <!-- <span (click)="onIconChange()" ></span>  -->
+  
+ <input type="text" name="search_query" [(ngModel)]="searchTypedText" >
+
+<p *ngFor="let icon of socialMedia" (click)="onIconChange(icon)">{{icon}}</p>
